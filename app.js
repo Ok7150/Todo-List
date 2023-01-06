@@ -1,17 +1,10 @@
-/*""""""""""""""""""""""""""""""""""""""""*/
-/*""""""""""""""" Variable """""""""""""""*/
-/*""""""""""""""""""""""""""""""""""""""""*/
+
 let input_name = document.getElementById("input_name")
 let input_add = document.getElementById("input_add")
 let name_target = undefined
 let tasks = document.getElementById("tasks")
 let tasks_todo = document.getElementsByClassName("todo")
 
-
-
-/*""""""""""""""""""""""""""""""""""""""""*/
-/*""""""""""""""" GetInput """""""""""""""*/
-/*""""""""""""""""""""""""""""""""""""""""*/
 input_name.addEventListener("keypress", event => {
     name_target = event.target
     if (event.key === "Enter") {
@@ -27,10 +20,8 @@ input_add.addEventListener("click", event => {
 })
 
 
+/*""""  Tasks  """"*/
 
-/*""""""""""""""""""""""""""""""""""""""""*/
-/*"""""""""""""""  Tasks   """""""""""""""*/
-/*""""""""""""""""""""""""""""""""""""""""*/
 const todo = (value) => {
     let div = document.createElement("div")
     div.className = "todo"
@@ -48,7 +39,6 @@ const todo = (value) => {
     remove.className = "remove"
     remove.innerHTML = "Remove"
 
-    /* */
     div2.appendChild(edit)
     div2.appendChild(remove)
     div.appendChild(input)
@@ -67,7 +57,7 @@ const todo = (value) => {
                         }
                     })
                 })
-                /////////////////////////////////
+   
                 v2[1].addEventListener("click", eventEdit => {
                     v0.remove()
                 })
